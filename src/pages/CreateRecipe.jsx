@@ -57,169 +57,169 @@ const CreateRecipe = () => {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit(SubmitHandler)} className="space-y-5">
-            {/* Image URL */}
-            <div>
-              <label className="block text-sm font-medium text-slate-300 mb-2">
-                Image URL
-              </label>
+            <form onSubmit={handleSubmit(SubmitHandler)} className="space-y-5">
+              {/* Image URL */}
+              <div>
+                <label className="block text-sm font-medium text-slate-300 mb-2">
+                  Image URL
+                </label>
 
-              <input
-                className={`w-full bg-slate-800/70 border ${
-                  errors.image ? "border-red-500" : "border-slate-700"
-                } rounded-lg px-4 py-3 outline-none transition focus:border-orange-400 focus:ring-1 focus:ring-orange-400`}
-                {...register("image", { required: true })}
-                type="url"
-                placeholder="https://example.com/recipe.jpg"
-              />
+                <input
+                  className={`w-full bg-slate-800/70 border ${
+                    errors.image ? "border-red-500" : "border-slate-700"
+                  } rounded-lg px-4 py-3 outline-none transition focus:border-orange-400 focus:ring-1 focus:ring-orange-400`}
+                  {...register("image", { required: true })}
+                  type="url"
+                  placeholder="https://example.com/recipe.jpg"
+                />
 
-              {errors.image && (
-                <small className="text-red-400 mt-1 block">
-                  Please enter the image URL
-                </small>
-              )}
-            </div>
+                {errors.image && (
+                  <small className="text-red-400 mt-1 block">
+                    Please enter the image URL
+                  </small>
+                )}
+              </div>
 
-            {/* Recipe Title */}
-            <div>
-              <label className="block text-sm font-medium text-slate-300 mb-2">
-                Recipe Title
-              </label>
+              {/* Recipe Title */}
+              <div>
+                <label className="block text-sm font-medium text-slate-300 mb-2">
+                  Recipe Title
+                </label>
 
-              <input
-                className={`w-full bg-slate-800/70 border ${
-                  errors.recipetitle ? "border-red-500" : "border-slate-700"
-                } rounded-lg px-4 py-3 outline-none transition focus:border-orange-400 focus:ring-1 focus:ring-orange-400`}
-                {...register("recipetitle", { required: true })}
-                type="text"
-                placeholder="Chicken Noodle Soup"
-              />
+                <input
+                  className={`w-full bg-slate-800/70 border ${
+                    errors.recipetitle ? "border-red-500" : "border-slate-700"
+                  } rounded-lg px-4 py-3 outline-none transition focus:border-orange-400 focus:ring-1 focus:ring-orange-400`}
+                  {...register("recipetitle", { required: true })}
+                  type="text"
+                  placeholder="Chicken Noodle Soup"
+                />
 
-              {errors.recipetitle && (
-                <small className="text-red-400 mt-1 block">
-                  Please enter the recipe title
-                </small>
-              )}
-            </div>
+                {errors.recipetitle && (
+                  <small className="text-red-400 mt-1 block">
+                    Please enter the recipe title
+                  </small>
+                )}
+              </div>
 
-            {/* Chef Name */}
-            <div>
-              <label className="block text-sm font-medium text-slate-300 mb-2">
-                Chef Name
-              </label>
+              {/* Chef Name */}
+              <div>
+                <label className="block text-sm font-medium text-slate-300 mb-2">
+                  Chef Name
+                </label>
 
-              <input
-                className={`w-full bg-slate-800/70 border ${
-                  errors.chefname ? "border-red-500" : "border-slate-700"
-                } rounded-lg px-4 py-3 outline-none transition focus:border-orange-400 focus:ring-1 focus:ring-orange-400`}
-                {...register("chefname", { required: true })}
-                type="text"
-                placeholder="Enter chef name"
-              />
+                <input
+                  className={`w-full bg-slate-800/70 border ${
+                    errors.chefname ? "border-red-500" : "border-slate-700"
+                  } rounded-lg px-4 py-3 outline-none transition focus:border-orange-400 focus:ring-1 focus:ring-orange-400`}
+                  {...register("chefname", { required: true })}
+                  type="text"
+                  placeholder="Enter chef name"
+                />
 
-              {errors.chefname && (
-                <small className="text-red-400 mt-1 block">
-                  Please enter the chef name
-                </small>
-              )}
-            </div>
+                {errors.chefname && (
+                  <small className="text-red-400 mt-1 block">
+                    Please enter the chef name
+                  </small>
+                )}
+              </div>
 
-            {/* Description */}
-            <div>
-              <label className="block text-sm font-medium text-slate-300 mb-2">
-                Description
-              </label>
+              {/* Description */}
+              <div>
+                <label className="block text-sm font-medium text-slate-300 mb-2">
+                  Description
+                </label>
 
-              <textarea
-                rows="3"
-                className={`w-full bg-slate-800/70 border ${
-                  errors.description ? "border-red-500" : "border-slate-700"
-                } rounded-lg px-4 py-3 outline-none resize-none transition focus:border-orange-400 focus:ring-1 focus:ring-orange-400`}
-                {...register("description", { required: true })}
-                placeholder="Write a short description..."
-              />
+                <textarea
+                  rows="3"
+                  className={`w-full bg-slate-800/70 border ${
+                    errors.description ? "border-red-500" : "border-slate-700"
+                  } rounded-lg px-4 py-3 outline-none resize-none transition focus:border-orange-400 focus:ring-1 focus:ring-orange-400`}
+                  {...register("description", { required: true })}
+                  placeholder="Write a short description..."
+                />
 
-              {errors.description && (
-                <small className="text-red-400 mt-1 block">
-                  Please enter the description
-                </small>
-              )}
-            </div>
+                {errors.description && (
+                  <small className="text-red-400 mt-1 block">
+                    Please enter the description
+                  </small>
+                )}
+              </div>
 
-            {/* Ingredients */}
-            <div>
-              <label className="block text-sm font-medium text-slate-300 mb-2">
-                Ingredients
-              </label>
+              {/* Ingredients */}
+              <div>
+                <label className="block text-sm font-medium text-slate-300 mb-2">
+                  Ingredients
+                </label>
 
-              <textarea
-                rows="3"
-                className={`w-full bg-slate-800/70 border ${
-                  errors.ingredients ? "border-red-500" : "border-slate-700"
-                } rounded-lg px-4 py-3 outline-none resize-none transition focus:border-orange-400 focus:ring-1 focus:ring-orange-400`}
-                {...register("ingredients", { required: true })}
-                placeholder="Chicken, garlic, onion, spices..."
-              />
+                <textarea
+                  rows="3"
+                  className={`w-full bg-slate-800/70 border ${
+                    errors.ingredients ? "border-red-500" : "border-slate-700"
+                  } rounded-lg px-4 py-3 outline-none resize-none transition focus:border-orange-400 focus:ring-1 focus:ring-orange-400`}
+                  {...register("ingredients", { required: true })}
+                  placeholder="Chicken, garlic, onion, spices..."
+                />
 
-              {errors.ingredients && (
-                <small className="text-red-400 mt-1 block">
-                  Please enter the ingredients
-                </small>
-              )}
-            </div>
+                {errors.ingredients && (
+                  <small className="text-red-400 mt-1 block">
+                    Please enter the ingredients
+                  </small>
+                )}
+              </div>
 
-            {/* Instructions */}
-            <div>
-              <label className="block text-sm font-medium text-slate-300 mb-2">
-                Instructions
-              </label>
+              {/* Instructions */}
+              <div>
+                <label className="block text-sm font-medium text-slate-300 mb-2">
+                  Instructions
+                </label>
 
-              <textarea
-                rows="4"
-                className={`w-full bg-slate-800/70 border ${
-                  errors.instructions ? "border-red-500" : "border-slate-700"
-                } rounded-lg px-4 py-3 outline-none resize-none transition focus:border-orange-400 focus:ring-1 focus:ring-orange-400`}
-                {...register("instructions", { required: true })}
-                placeholder="Explain the cooking steps..."
-              />
+                <textarea
+                  rows="4"
+                  className={`w-full bg-slate-800/70 border ${
+                    errors.instructions ? "border-red-500" : "border-slate-700"
+                  } rounded-lg px-4 py-3 outline-none resize-none transition focus:border-orange-400 focus:ring-1 focus:ring-orange-400`}
+                  {...register("instructions", { required: true })}
+                  placeholder="Explain the cooking steps..."
+                />
 
-              {errors.instructions && (
-                <small className="text-red-400 mt-1 block">
-                  Please enter the instructions
-                </small>
-              )}
-            </div>
+                {errors.instructions && (
+                  <small className="text-red-400 mt-1 block">
+                    Please enter the instructions
+                  </small>
+                )}
+              </div>
 
-            {/* Category */}
-            <div>
-              <label className="block text-sm font-medium text-slate-300 mb-2">
-                Category
-              </label>
+              {/* Category */}
+              <div>
+                <label className="block text-sm font-medium text-slate-300 mb-2">
+                  Category
+                </label>
 
-              <select
-                className="w-full bg-slate-800/70 border border-slate-700 rounded-lg px-4 py-3 outline-none cursor-pointer transition focus:border-orange-400 focus:ring-1 focus:ring-orange-400"
-                {...register("category", { required: true })}
+                <select
+                  className="w-full bg-slate-800/70 border border-slate-700 rounded-lg px-4 py-3 outline-none cursor-pointer transition focus:border-orange-400 focus:ring-1 focus:ring-orange-400"
+                  {...register("category", { required: true })}
+                >
+                  <option value="Breakfast">Breakfast</option>
+                  <option value="Lunch">Lunch</option>
+                  <option value="Dinner">Dinner</option>
+                </select>
+
+                {errors.category && (
+                  <small className="text-red-400 mt-1 block">
+                    Please select a category
+                  </small>
+                )}
+              </div>
+
+              {/* Submit */}
+              <button
+                type="submit"
+                className="w-full bg-orange-500 hover:bg-orange-600 active:scale-[0.98] transition-all duration-200 py-3 rounded-lg font-semibold text-white shadow-lg shadow-orange-500/20 cursor-pointer"
               >
-                <option value="Breakfast">Breakfast</option>
-                <option value="Lunch">Lunch</option>
-                <option value="Dinner">Dinner</option>
-              </select>
-
-              {errors.category && (
-                <small className="text-red-400 mt-1 block">
-                  Please select a category
-                </small>
-              )}
-            </div>
-
-            {/* Submit */}
-            <button
-              type="submit"
-              className="w-full bg-orange-500 hover:bg-orange-600 active:scale-[0.98] transition-all duration-200 py-3 rounded-lg font-semibold text-white shadow-lg shadow-orange-500/20 cursor-pointer"
-            >
-              Create Recipe
-            </button>
-          </form>
+                Create Recipe
+              </button>
+            </form>
         </div>
 
         {/* ================= RIGHT : PREVIEW ================= */}
