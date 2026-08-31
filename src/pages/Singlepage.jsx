@@ -30,6 +30,7 @@ const Singlepage = () => {
   const DeleteHandler = () => {
     const deleteup = data.filter((recipe) => recipe.id != params.id);
     setdata(deleteup);
+    toast.error("Recipe Deleted!!!");
   };
 
   if (!recipe) {
