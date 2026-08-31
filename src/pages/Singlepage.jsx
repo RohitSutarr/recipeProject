@@ -15,7 +15,6 @@ const Singlepage = () => {
     register,
     handleSubmit,
     reset,
-    watch,
     formState: { errors },
   } = useForm();
 
